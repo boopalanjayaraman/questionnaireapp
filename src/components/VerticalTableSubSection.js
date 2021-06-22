@@ -35,6 +35,7 @@ class VerticalTableSubSection extends Component{
 			"name": "Who is responding to this DDQ?",
 			"number": null,
 			"displayOrder": 1,
+            "subSectionType": "verticalTable", //// Added for Vertical Table
 			"questionData": [{
 				"id": 30585,
 				"subsectionId": 3633,
@@ -308,21 +309,7 @@ class VerticalTableSubSection extends Component{
 			"isFlag": false
 	    };
 
-        this.state = subSectionData; /*{
-            "id": 0,
-            "subsectionId": 0,
-            "questionTypeId": 0,
-            "name": "",
-            "isRequired": false,
-            "displayOrder": 0,
-            "questionNumber": "",
-            "questionOptionData": [
-            ],
-            "isCompleted": false,
-            "answerData": []
-        };*/
-
-
+        this.state = props.subSectionData ?? subSectionData;  
 
     }
 

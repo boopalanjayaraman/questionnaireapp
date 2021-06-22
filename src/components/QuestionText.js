@@ -13,6 +13,9 @@ class QuestionText extends Component{
             isRowStatement: props.isRowStatement ?? false,
             questionTypeId: props.questionTypeId ?? 0,
             questionNumber: props.questionNumber ?? 0,
+            isUserDefined: props.isUserDefined ?? false,
+            enteredValue: props.enteredValue ?? "",
+            rowStatementId: props.rowStatementId ?? 0
         };
     }
 
@@ -31,7 +34,9 @@ class QuestionText extends Component{
     componentDidMount(){
     }
 
-
+    onUserDefinedValueChange = (e) => {
+        this.setState({enteredValue : e.target.value});
+    }
 
     render(){
 
@@ -41,6 +46,16 @@ class QuestionText extends Component{
                 <div>
                     <p><span className="blue-text"> { questionNumber } </span>
                         <span> { questionText } </span>
+                        {
+                            this.state.isRowStatement && this.state.isUserDefined &&
+                                <input id={ this.state.rowStatementId } 
+                                type="text" 
+                                style={{backgroundColor: "lightgray", color:"black"}}
+                                onChange={ this.onUserDefinedValueChange }
+                                value= { this.state.enteredValue }>
+                                </input>
+                        }
+                        
                     </p>
                 </div>
         );

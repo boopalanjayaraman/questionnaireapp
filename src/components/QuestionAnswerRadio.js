@@ -32,7 +32,9 @@ class QuestionAnswerRadio extends Component{
                 isAdditionalFieldRequired: false,
                 otherData: "",
                 answer: ""
-            }]
+            }],
+            rowStatementId: props.Attributes.rowStatementId ?? 0,
+            rowStatement : props.Attributes.rowStatement ?? null //// added for matrix
         };
     }
 
@@ -51,6 +53,21 @@ class QuestionAnswerRadio extends Component{
 
     onAnswerChange = e=>{
         var answers = {...this.state.answerData};
+
+        if(!answers[0]){
+            answers = [{
+                questionId: 0,
+                isOption: false,
+                optionId: 0,
+                optionIds: [],
+                isSelected: false,
+                displayOrder: 0,
+                isAdditionalFieldRequired: false,
+                otherData: "",
+                answer: ""
+            }];
+        }
+
         answers[0].optionId = e.target.value; 
         this.setState({answerData: answers});
     }

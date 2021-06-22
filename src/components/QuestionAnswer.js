@@ -19,7 +19,7 @@ class QuestionAnswer extends Component{
             ],
             isCompleted: props.Attributes.isCompleted ?? false,
             answerData: props.Attributes.answerData ?? [],
-            rowStatement: props.Attributes.rowStatement ?? null
+            rowStatement: props.rowStatement ?? null
         };
         this.answerComponent = null;
     }

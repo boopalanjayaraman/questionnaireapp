@@ -32,7 +32,9 @@ class QuestionAnswerDropDown extends Component{
                 isAdditionalFieldRequired: false,
                 otherData: "",
                 answer: ""
-            }]
+            }],
+            rowStatementId: props.Attributes.rowStatementId ?? 0,
+            rowStatement : props.Attributes.rowStatement ?? null //// added for matrix
         };
     }
 
@@ -53,8 +55,22 @@ class QuestionAnswerDropDown extends Component{
 
     onAnswerChange = e=>{
         var answers = {...this.state.answerData}
+
+        if(!answers[0]){
+            answers = [{
+                questionId: 0,
+                isOption: false,
+                optionId: 0,
+                optionIds: [],
+                isSelected: false,
+                displayOrder: 0,
+                isAdditionalFieldRequired: false,
+                otherData: "",
+                answer: ""
+            }];
+        }
         answers[0].optionId = e.target.value; //// changes
-        this.setState({answers});
+        this.setState({answerData : answers});
     }
 
 
@@ -68,7 +84,7 @@ class QuestionAnswerDropDown extends Component{
                     <FormControl fullWidth={"100%"}>
                         <Select
                             id= { "AnswerDropDown_" + this.state.questionId}
-                            value={ this.state.answerData[0].optionId}
+                            value={ this.state.answerData[0]? this.state.answerData[0].optionId : "" }
                             onChange={ this.onAnswerChange }
                             >
                                 { this.state.questionOptionData.map((opt) => (

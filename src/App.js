@@ -8,6 +8,8 @@ import Landing from './views/Landing';
 import RegularSubSection from './components/RegularSubSection';
 import VerticalTableSubSection from './components/VerticalTableSubSection';
 import HorizontalTableSubSection from './components/HorizontalTableSubSection';
+import MatrixSubSection from './components/MatrixSubSection';
+import FullQuestionnaire from './components/FullQuestionnaire';
  
 class App extends Component {
   render(){
@@ -20,6 +22,8 @@ class App extends Component {
                   <Route exact path="/regular" component={RegularSubSection} />
                   <Route exact path="/verticaltable" component={VerticalTableSubSection} />
                   <Route exact path="/horizontaltable" component={HorizontalTableSubSection} />
+                  <Route exact path="/matrix" component={MatrixSubSection} />
+                  <Route exact path="/fullquestionnaire" component={FullQuestionnaire} />
             </div>
         </Router>
     );

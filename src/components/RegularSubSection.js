@@ -288,21 +288,7 @@ class RegularSubSection extends Component{
 			"isFlag": false
 	    };
 
-        this.state = subSectionData; /*{
-            "id": 0,
-            "subsectionId": 0,
-            "questionTypeId": 0,
-            "name": "",
-            "isRequired": false,
-            "displayOrder": 0,
-            "questionNumber": "",
-            "questionOptionData": [
-            ],
-            "isCompleted": false,
-            "answerData": []
-        };*/
-
-
+        this.state = props.subSectionData ?? subSectionData; 
 
     }
 
@@ -340,7 +326,7 @@ class RegularSubSection extends Component{
                 <div className="container">
                             { this.state.questionData.map(
                                 (_item) => (
-                                    <div style={{ marginTop: "4rem" }} className="row">
+                                    <div style={{ marginTop: "4rem", backgroundColor:"rgb(251,247,247)" }} className="row">
                                         <div className="col m12 s12">
                                             <QuestionText id={_item.id} name={_item.name} 
                                                 questionNumber = {_item.questionNumber} ></QuestionText>
