@@ -79,7 +79,8 @@ class QuestionAnswerTextBox extends Component{
                         type="text" 
                         class="validate" 
                         onChange={ this.onAnswerChange }
-                        value= { this.state.answerData[0]? this.state.answerData[0].answer : "" }>
+                        value= { this.state.answerData[0]? this.state.answerData[0].answer : "" }
+                        >
                         </input>
                 </div>
         );

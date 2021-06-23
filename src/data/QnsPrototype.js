@@ -1549,6 +1549,147 @@ const subsectionData = [
         ],
         "isCompleted": false,
         "isFlag": false
+    },
+    {
+        "id": 36001,
+        "sectionId": 12990,
+        "name": "System type",
+        "number": null,
+        "displayOrder": 6,
+        "subSectionType": "matrix", //// Added for matrix
+        "hideRowStatements" : false, //// Added for matrix
+        "rowStatements": [{
+            "id": 1,
+            "value" : "Portfolio management",
+            "group": "",
+            "isUserDefined" : false,
+            "enteredValue" : ""
+        },
+        {
+            "id": 2,
+            "value" : "Trade order management",
+            "group": "",
+            "isUserDefined" : false,
+            "enteredValue" : ""
+        },
+        {
+            "id": 3,
+            "value" : "Trade matching",
+            "group": "",
+            "isUserDefined" : false,
+            "enteredValue" : ""
+        },
+        {
+            "id": 4,
+            "value" : "Securities reconciliation",
+            "group": "",
+            "isUserDefined" : false,
+            "enteredValue" : ""
+        },
+        {
+            "id": 5,
+            "value" : "Cash reconciliation",
+            "group": "",
+            "isUserDefined" : false,
+            "enteredValue" : ""
+        }
+        ], //// Added for matrix
+        "questionData": [{
+            "id": 6001,
+            "subsectionId": 36999,
+            "questionTypeId": 7,
+            "name": "System source",
+            "isRequired": false,
+            "displayOrder": 1,
+            "questionNumber": "",
+            "questionOptionData": [
+			{
+                "id": 56568,
+                "questionId": 6001,
+                "name": "Proprietary",
+                "displayOrder": 1,
+                "isAdditionalFieldRequired": false
+            },
+            {
+                "id": 56569,
+                "questionId": 6001,
+                "name": "Externally sourced",
+                "displayOrder": 2,
+                "isAdditionalFieldRequired": false
+            },
+            {
+                "id": 56570,
+                "questionId": 6001,
+                "name": "Not Applicable",
+                "displayOrder": 3,
+                "isAdditionalFieldRequired": false
+            }],
+            "isCompleted": false,
+            "answerData": [], //// this wont be used for matrix
+            "modifiedBy": null,
+            "modifiedOn": "2021-06-02T14:57:40.8266667",
+            "isFlag": false,
+            "comments": [],
+        },
+        {
+            "id": 6002,
+            "subsectionId": 36999,
+            "questionTypeId": 7,
+            "name": "Can system handle all instrument types?",
+            "isRequired": false,
+            "displayOrder": 2,
+            "questionNumber": "",
+            "questionOptionData": [
+			{
+                "id": 56571,
+                "questionId": 6001,
+                "name": "Yes",
+                "displayOrder": 1,
+                "isAdditionalFieldRequired": false
+            },
+            {
+                "id": 56572,
+                "questionId": 6001,
+                "name": "No",
+                "displayOrder": 2,
+                "isAdditionalFieldRequired": false
+            },
+            {
+                "id": 56573,
+                "questionId": 6001,
+                "name": "Not Applicable",
+                "displayOrder": 3,
+                "isAdditionalFieldRequired": false
+            }
+			],
+            "isCompleted": false,
+            "answerData": [], //// this wont be used for matrix
+            "modifiedBy": null,
+            "modifiedOn": "2021-06-02T14:57:40.8266667",
+            "isFlag": false,
+            "comments": [] ,
+        },
+        {
+            "id": 6003,
+            "subsectionId": 36999,
+            "questionTypeId": 1,
+            "name": "External provider or internal responsible party",
+            "isRequired": false,
+            "displayOrder": 3,
+            "questionNumber": "",
+            "questionOptionData": [],
+            "isCompleted": false,
+            "answerData": [], //// this wont be used for matrix
+            "modifiedBy": null,
+            "modifiedOn": "2021-06-02T14:57:40.8266667",
+            "isFlag": false,
+            "comments": [],
+        } 
+    ],
+        "matrixQuestionData" : [
+        ],
+        "isCompleted": false,
+        "isFlag": false
     }
 ];
 

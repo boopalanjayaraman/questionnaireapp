@@ -52,7 +52,8 @@ class QuestionText extends Component{
                                 type="text" 
                                 style={{backgroundColor: "lightgray", color:"black"}}
                                 onChange={ this.onUserDefinedValueChange }
-                                value= { this.state.enteredValue }>
+                                value= { this.state.enteredValue }
+                                >
                                 </input>
                         }
                         

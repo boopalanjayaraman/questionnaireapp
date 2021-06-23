@@ -316,6 +316,7 @@ class HorizontalTableSubSection extends Component{
 
         this.state = props.subSectionData ?? subSectionData;  
 
+
     }
 
     componentDidUpdate(prevProps){
